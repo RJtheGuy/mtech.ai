@@ -1,0 +1,19 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .hero {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 100px 30px;
+    text-align: center;
+  }
+  .btn-custom {
+    background-color: #00b894;
+    color: white;
+  }
+  footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
