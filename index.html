@@ -1,51 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MTech.ai – Data Science Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/stylesheet.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTech.ai | AI Projects Portfolio by [Your Name]</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fbfc;
+      color: #212529;
+    }
+    .hero {
+      padding: 100px 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    .btn-primary {
+      background-color: #4f46e5;
+      border-color: #4f46e5;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
+
 <body>
-
-  <section class="hero">
-    <h1 class="display-4">Welcome to MTech.ai</h1>
-    <p class="lead">Hi, I'm Mwinyi — I help businesses unlock value through data science and AI-powered insights.</p>
-    <a href="projects.html" class="btn btn-custom btn-lg">See My Projects</a>
-  </section>
-  <section class="container my-5">
-    <h2 class="mb-4">🚀 Featured Project: TelcoGuard</h2>
-    <p>TelcoGuard is a churn prediction tool designed to help telecom businesses identify at-risk customers and improve retention strategies.</p>
-    <ul>
-      <li>🔍 Built machine learning models to detect churn patterns</li>
-      <li>📊 Achieved over 87% accuracy using real-world telco data</li>
-      <li>⚙️ Tools: Python, scikit-learn, pandas, matplotlib</li>
-    </ul>
-    <a href="projects.html#telcoguard" class="btn btn-outline-primary">View Full Case Study</a>
-  </section>
-
-  <section class="container my-5">
-    <h2>👨‍💻 About Me</h2>
-    <p>I’m a data science enthusiast focused on solving real-world problems using predictive analytics and clean visual storytelling. From Python pipelines to client-ready dashboards, I bridge code and business value.</p>
-    <a href="about.html" class="btn btn-outline-dark">More About Me</a>
-  </section>
-
-  <section class="container my-5 text-center">
-    <h2>📬 Let’s Connect</h2>
-    <p>Interested in collaborating or have a project idea? Let’s talk!</p>
-    <a href="contact.html" class="btn btn-custom">Contact Me</a>
-  </section>
-
-  <footer>
-    <p>© 2025 MTech.ai | Built by Mwinyi</p>
-    <div>
-      <a href="https://github.com/your-github" target="_blank">GitHub</a> ·
-      <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> ·
-      <a href="rashidj.mwinyi@gmail.com">Email</a>
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Welcome to MTech.ai</h1>
+      <p class="lead mt-3">A showcase of AI-driven solutions in churn analytics, NLP, medical imaging, and beyond</p>
+      <a href="#portfolio" class="btn btn-light mt-4">View Portfolio</a>
     </div>
-  </footer>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Skills/Offerings Section -->
+  <section class="section text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">AI Domains I Work In</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="fw-bold">Customer Analytics</h5>
+            <p>Churn prediction, segmentation, retention strategy.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="fw-bold">Computer Vision</h5>
+            <p>Medical imaging classification, CNN pipelines, model interpretability.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="fw-bold">Natural Language Processing</h5>
+            <p>Sentiment analysis, chatbot development, language modeling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">My AI Portfolio</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <img src="assets/images/dashboard-preview.png" class="img-fluid rounded mb-3" alt="TelcoGuard">
+            <h5 class="fw-bold">TelcoGuard</h5>
+            <p>Predicts customer churn for telecom businesses using behavioral data.</p>
+            <a href="https://telcoguard-churn-predictor-dwcgvxbzsrsmpnecmoupc4.streamlit.app/" class="btn btn-outline-primary mt-auto">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <img src="assets/images/brainscan-thumb.png" class="img-fluid rounded mb-3" alt="BrainScan">
+            <h5 class="fw-bold">BrainScan.AI</h5>
+            <p>CNN-based brain tumor detector from MRI scans with high accuracy.</p>
+            <a href="brainscan.html" class="btn btn-outline-primary mt-auto">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <img src="assets/images/sentiment-thumb.png" class="img-fluid rounded mb-3" alt="Sentiment Analysis">
+            <h5 class="fw-bold">Sentiment Pulse</h5>
+            <p>NLP-powered sentiment analysis for social media or customer reviews.</p>
+            <a href="sentiment.html" class="btn btn-outline-primary mt-auto">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <img src="assets/images/chatbot-thumb.png" class="img-fluid rounded mb-3" alt="MChat">
+            <h5 class="fw-bold">MChat</h5>
+            <p>Conversational AI chatbot demo using RNN/Transformer architecture.</p>
+            <a href="mchat.html" class="btn btn-outline-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section text-center">
+    <div class="container">
+      <h2 class="fw-bold">Let's Build Together</h2>
+      <p class="mb-4">Got a project or idea? I'm always open to chat about how AI can unlock new opportunities for your business.</p>
+      <a href="mailto:youremail@example.com" class="btn btn-primary">Contact Me</a>
+    </div>
+  </section>
+
+  <footer class="text-center text-muted py-4">
+    <small>&copy; 2025 MTech.ai. Built with ❤️ and Python.</small>
+  </footer>
 </body>
+
 </html>
