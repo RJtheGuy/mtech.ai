@@ -17,3 +17,7 @@ body {
     background-color: #f8f9fa;
     text-align: center;
   }
+
+  #contact{
+    background-image: "assets/images/bg-connect.jpg";
+  }
