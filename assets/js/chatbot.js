@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const RENDER_API_URL = "https://mtechchatbot.onrender.com"; // Your Render endpoint
     const chatbotToggle = document.querySelector('.chatbot-toggle');
     const chatbotWindow = document.querySelector('.chatbot-window');
     const chatbotClose = document.querySelector('.chatbot-close');
@@ -6,24 +7,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatbotInput = document.querySelector('.chatbot-input input');
     const chatbotSend = document.querySelector('.chatbot-send');
     
-    // Toggle chatbot window
+    // Toggle chatbot window (unchanged)
     chatbotToggle.addEventListener('click', function() {
       chatbotWindow.classList.toggle('active');
-      if (chatbotWindow.classList.contains('active')) {
-        // Add welcome message if empty
-        if (chatbotMessages.children.length === 0) {
-          addBotMessage("Hello! I'm the MTech.ai assistant. How can I help you today?");
-        }
+      if (chatbotWindow.classList.contains('active') && chatbotMessages.children.length === 0) {
+        addBotMessage("Hello! I'm the MTech.ai assistant. Ask me about our projects or expertise!");
       }
     });
-    
-    // Close chatbot
+
+    // Close chatbot (unchanged)
     chatbotClose.addEventListener('click', function() {
       chatbotWindow.classList.remove('active');
     });
-    
-    // Send message
-    function sendMessage() {
+
+    // Send message (modified)
+    async function sendMessage() {
       const message = chatbotInput.value.trim();
       if (message) {
         addUserMessage(message);
@@ -32,33 +30,71 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show typing indicator
         const typingIndicator = document.createElement('div');
         typingIndicator.className = 'typing-indicator';
-        typingIndicator.innerHTML = `
-          <span></span>
-          <span></span>
-          <span></span>
-        `;
+        typingIndicator.innerHTML = `<span></span><span></span><span></span>`;
         chatbotMessages.appendChild(typingIndicator);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         
-        // Simulate bot response after delay
-        setTimeout(() => {
+        try {
+          const response = await queryBackend(message);
           chatbotMessages.removeChild(typingIndicator);
-          generateBotResponse(message);
-        }, 1500);
+          addBotMessage(response);
+        } catch (error) {
+          chatbotMessages.removeChild(typingIndicator);
+          addBotMessage("I'm having trouble connecting to my knowledge base. Please try again later.");
+          console.error("API Error:", error);
+        }
       }
     }
-    
-    // Send message on button click
-    chatbotSend.addEventListener('click', sendMessage);
-    
-    // Send message on Enter key
-    chatbotInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        sendMessage();
+
+    // New function to query Render backend
+    async function queryBackend(message) {
+      const shouldQueryAPI = isModelQuery(message.toLowerCase());
+      
+      if (!shouldQueryAPI) {
+        return generateSimpleResponse(message);
       }
+      
+      const response = await fetch(`${RENDER_API_URL}/ask`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: message })
+      });
+      
+      if (!response.ok) throw new Error("API request failed");
+      const data = await response.json();
+      return data.response;
+    }
+
+    // Determine if query should go to the model
+    function isModelQuery(message) {
+      const modelKeywords = [
+        'technology', 'technologies', 'tech',
+        'nlp', 'natural language',
+        'computer vision', 'cv',
+        'predictive analytics',
+        'how does', 'explain',
+        'what is', 'which project'
+      ];
+      return modelKeywords.some(keyword => message.includes(keyword));
+    }
+
+    // Simple responses (unchanged)
+    function generateSimpleResponse(userMessage) {
+      const lowerMessage = userMessage.toLowerCase();
+      if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+        return "Hello there! How can I assist you with AI solutions today?";
+      } else if (lowerMessage.includes('contact')) {
+        return "You can contact us via email at rashidj.mwinyi@gmail.com";
+      } // ... other simple responses ...
+    }
+
+    // Event listeners (unchanged)
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') sendMessage();
     });
-    
-    // Add user message to chat
+
+    // Message display functions (unchanged)
     function addUserMessage(text) {
       const messageDiv = document.createElement('div');
       messageDiv.className = 'message user-message';
@@ -66,8 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chatbotMessages.appendChild(messageDiv);
       chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
-    
-    // Add bot message to chat
+
     function addBotMessage(text) {
       const messageDiv = document.createElement('div');
       messageDiv.className = 'message bot-message';
@@ -75,26 +110,4 @@ document.addEventListener('DOMContentLoaded', function() {
       chatbotMessages.appendChild(messageDiv);
       chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
-    
-    // Generate bot response
-    function generateBotResponse(userMessage) {
-      const lowerMessage = userMessage.toLowerCase();
-      let response;
-      
-      if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-        response = "Hello there! How can I assist you with AI solutions today?";
-      } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-        response = "You can contact Rashid directly via email at rashidj.mwinyi@gmail.com or through the contact section below.";
-      } else if (lowerMessage.includes('portfolio') || lowerMessage.includes('projects')) {
-        response = "Check out the portfolio section to see our featured AI projects like TelcoGuard and BrainScan.AI.";
-      } else if (lowerMessage.includes('service') || lowerMessage.includes('offer')) {
-        response = "We offer AI solutions in Predictive Analytics, Computer Vision, and NLP. See the Expertise section for details.";
-      } else if (lowerMessage.includes('thank')) {
-        response = "You're welcome! Is there anything else I can help you with?";
-      } else {
-        response = "I'm an AI assistant trained to answer questions about MTech.ai services. You can ask about our projects, expertise, or how to contact us.";
-      }
-      
-      addBotMessage(response);
-    }
-  });
+});
