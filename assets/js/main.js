@@ -35,6 +35,13 @@ window.addEventListener('scroll', function() {
         }
       });
     });
+      // Show the modal
+var myModal = new bootstrap.Modal(document.getElementById('demoRequestModal'));
+myModal.show();
+
+// Hide the modal
+myModal.hide();
+
     
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
