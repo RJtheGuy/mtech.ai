@@ -35,6 +35,20 @@ window.addEventListener('scroll', function() {
         }
       });
     });
+
+ document.getElementById('contactPageBtn').addEventListener('click', function() {
+  // Get the modal instance
+  const modal = bootstrap.Modal.getInstance(document.getElementById('demoRequestModal'));
+  
+  // Hide the modal first
+  modal.hide();
+  
+  // Wait for the modal to fully close, then navigate
+  document.getElementById('demoRequestModal').addEventListener('hidden.bs.modal', function() {
+    // Navigate to contact section
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }, { once: true }); // Use once: true to ensure the event listener only runs once
+});
     
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
