@@ -201,7 +201,7 @@
                     <i class="bi bi-play-circle me-1"></i> Interactive Demo
                   </button>
 <!--                   <a href="#" class="btn btn-link text-decoration-none"> -->
-                  <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#demoRequestModal">  
+                  <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#demoRequestModal">  
                     <i class="bi bi-cloud-arrow-down me-1"></i> API Docs
                   </button>
                 </div>
@@ -341,29 +341,6 @@
     </div>
   </div>
 
-<!--   
-  <div class="modal fade" id="demoRequestModal" tabindex="-1" aria-labelledby="demoRequestLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="demoRequestLabel" style="color: darkgreen;">Request a Demo</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <p style="color: black;">To access this demo, please contact me directly. I'd love to walk you through it!</p>
-          <div class="d-flex justify-content-center gap-2 mt-3">
-            <a href="mailto:rashidj.mwinyi@gmail.com" class="btn btn-success">
-              <i class="bi bi-envelope me-1"></i> Email Me
-            </a>
-            <a href="#contact" class="btn btn-outline-primary" data-bs-dismiss="modal">
-              <i class="bi bi-chat-left-text me-1"></i> Contact Page
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <div class="modal fade" id="demoRequestModal" tabindex="-1" aria-labelledby="demoRequestLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -403,20 +380,6 @@
         document.getElementById('contact-container').innerHTML = html;
       });
 
-
-    document.getElementById('contactPageBtn').addEventListener('click', function() {
-  // Get the modal instance
-  const modal = bootstrap.Modal.getInstance(document.getElementById('demoRequestModal'));
-  
-  // Hide the modal first
-  modal.hide();
-  
-  // Wait for the modal to fully close, then navigate
-  document.getElementById('demoRequestModal').addEventListener('hidden.bs.modal', function() {
-    // Navigate to contact section
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-  }, { once: true }); // Use once: true to ensure the event listener only runs once
-});
   </script>
 </body>
 </html>
