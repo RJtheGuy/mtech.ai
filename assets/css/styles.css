@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --primary: #4f46e5;
   --primary-dark: #4338ca;
   --dark: #0f172a;
@@ -21,7 +21,7 @@ body {
 }
 
 /* Navigation */
-/* .navbar {
+.navbar {
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
@@ -35,283 +35,6 @@ body {
 }
 
 /* Sections */
-/* .section {
-  padding: 100px 0;
-  position: relative;
-}
-
-.section-title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-}
-
-.section-title:after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 4px;
-  background: var(--primary);
-  bottom: -10px;
-  left: 25%;
-  border-radius: 2px;
-} */
-
-/* Hero */
-/* .hero {
-  padding: 180px 0 120px;
-  background: linear-gradient(to bottom right, var(--darker) 0%, var(--dark) 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/ai-hero-image.webp') no-repeat center center;
-  background-size: cover;
-  opacity: 0.15;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(to right, #fff 0%, var(--gray) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero .lead {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--gray);
-} */ 
-
-/* Cards */
-/* .card {
-  border: none;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(5px);
-  color: var(--light);
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.2);
-  border-color: rgba(79, 70, 229, 0.3);
-}
-
-.card-img-top {
-  border-radius: 0.75rem 0.75rem 0 0;
-  height: 200px;
-  object-fit: cover;
-} */
-
-/* Buttons */
-/* .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  padding: 0.75rem 1.75rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
-  transform: translateY(-2px);
-}
-
-.btn-outline-primary {
-  border-width: 2px;
-  font-weight: 600;
-} */
-
-/* Contact */
-/* .contact-card {
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 1rem;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer */
-/* footer {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 2rem 0;
-  border-top: 1px solid rgba(255,255,255,0.05);
-} */ 
-
-/* Tech Badges */
-/* .tech-badge {
-  background: rgba(79, 70, 229, 0.1);
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  padding: 0.35rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-} */
-
-/* Portfolio Background */
-/* .portfolio-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/images.jpg') no-repeat center center;
-  background-size: cover; */
-  /* opacity: 0.1; */
-/*   z-index: 0;
-}
-
-#portfolio {
-  position: relative;
-  overflow: hidden;
-  background-color: rgba(15, 23, 42, 0.9); /* Dark overlay for better contrast */ */
-/* } */
-/* 
-#portfolio .container {
-  position: relative;
-  z-index: 1;
-}
- */
-/* Make cards more visible against the background */
-/* #portfolio .card {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-} */
-
-/* Responsive Adjustments */
-/* @media (max-width: 768px) {
-  .section {
-    padding: 70px 0;
-  } */
-  
-/*    .hero {
-    padding: 120px 0 80px;
-  } 
-}
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --dark: #0f172a;
-  --darker: #020617;
-  --light: #f8fafc;
-  --gray: #94a3b8;
-  --text-dark-mode: #e2e8f0; /* New: a lighter text color for dark backgrounds */
-  --text-light-mode: #334155; /* New: a darker text color for light backgrounds */
-  --card-bg-dark: rgba(15, 23, 42, 0.7); /* Consistent card background */
-  --border-color-dark: rgba(255, 255, 255, 0.08); /* Slightly more visible borders */
-  --shadow-color-primary: rgba(79, 70, 229, 0.25); /* Stronger primary shadow */
-  --shadow-color-dark: rgba(0, 0, 0, 0.2); /* Stronger general shadow */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark-mode); /* Use new text color variable */
-  background-color: var(--darker);
-  margin: 0;
-  min-height: 100vh;
-  line-height: 1.6;
-}
-
-/* Navigation */
-.navbar {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 1rem 0;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid var(--border-color-dark); /* Use new border color */
-}
-
-.navbar.scrolled {
-  padding: 0.5rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
-}
-
-.navbar-brand .text-primary {
-  color: var(--primary) !important; /* Ensure primary color is applied */
-}
-
-.navbar-nav .nav-link {
-  color: var(--text-dark-mode);
-  transition: color 0.2s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--primary); /* Highlight active/hovered link */
-}
-
-
-/* Sections */
 .section {
   padding: 100px 0;
   position: relative;
@@ -322,7 +45,6 @@ body {
   display: inline-block;
   margin-bottom: 2.5rem;
   font-weight: 700;
-  color: var(--text-dark-mode); /* Ensure title color is correct */
 }
 
 .section-title:after {
@@ -379,24 +101,25 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: var(--gray);
-}
+} 
 
 /* Cards */
 .card {
-  border: 1px solid var(--border-color-dark); /* Use new border color */
+  border: none;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px var(--shadow-color-dark); /* Use new shadow color */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  background: var(--card-bg-dark); /* Use consistent card background */
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(5px);
-  color: var(--text-dark-mode);
+  color: var(--light);
   height: 100%;
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px var(--shadow-color-primary); /* Use primary shadow color */
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.2);
   border-color: rgba(79, 70, 229, 0.3);
 }
 
@@ -406,19 +129,7 @@ body {
   object-fit: cover;
 }
 
-/* Badges within cards */
-.card .badge {
-  font-size: 0.85em; /* Slightly larger badges for readability */
-  padding: 0.4em 0.8em;
-  font-weight: 700;
-}
-
-
 /* Buttons */
-.btn {
-  border-radius: 0.5rem; /* Slightly more rounded buttons */
-}
-
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -433,51 +144,20 @@ body {
   transform: translateY(-2px);
 }
 
-.btn-outline-light {
-    color: var(--light);
-    border-color: var(--light);
-    transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-    background-color: var(--light);
-    color: var(--darker); /* Text color when hovered */
-    border-color: var(--light);
-}
-
 .btn-outline-primary {
   border-width: 2px;
   font-weight: 600;
-  color: var(--primary);
-  border-color: var(--primary);
-  transition: all 0.3s ease;
 }
 
-.btn-outline-primary:hover {
-  background-color: var(--primary);
-  color: white;
-  border-color: var(--primary);
-  transform: translateY(-2px);
-}
-
-/* Contact Section */
+/* Contact */
 .contact-card {
-  background: var(--card-bg-dark); /* Consistent background */
+  background: rgba(15, 23, 42, 0.7);
   border-radius: 1rem;
-  padding: 2.5rem; /* More padding for a premium feel */
+  padding: 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color-dark); /* Consistent border */
+  border: 1px solid rgba(255,255,255,0.1);
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 15px 40px var(--shadow-color-dark); /* Stronger shadow */
-}
-
-.contact-card .lead {
-  color: var(--gray); /* Ensure lead text has good contrast */
-}
-
-.contact-card .small {
-  color: var(--gray); /* Lighten helper text */
 }
 
 /* Footer */
@@ -485,18 +165,8 @@ footer {
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
   padding: 2rem 0;
-  border-top: 1px solid var(--border-color-dark); /* Consistent border */
-  color: var(--gray); /* Footer text slightly lighter */
-}
-
-footer a {
-  color: var(--gray);
-  transition: color 0.2s ease-in-out;
-}
-
-footer a:hover {
-  color: var(--primary); /* Highlight footer icons on hover */
-}
+  border-top: 1px solid rgba(255,255,255,0.05);
+}  
 
 /* Tech Badges */
 .tech-badge {
@@ -521,14 +191,14 @@ footer a:hover {
   height: 100%;
   background: url('../images/images.jpg') no-repeat center center;
   background-size: cover;
-  opacity: 0.1; /* Reduced opacity slightly for better card contrast */
+  opacity: 0.1;
   z-index: 0;
 }
 
 #portfolio {
   position: relative;
   overflow: hidden;
-  background-color: rgba(15, 23, 42, 0.9); /* Dark overlay for better contrast */
+  background-color: rgba(15, 23, 42, 0.9);
 }
 
 #portfolio .container {
@@ -536,121 +206,11 @@ footer a:hover {
   z-index: 1;
 }
 
-/* Testimonials Section */
-.section[style="background-color: snow;"] {
-  background-color: var(--light) !important; /* Use variable for light background */
-  color: var(--text-light-mode); /* Dark text for light background */
-}
-
-.section[style="background-color: snow;"] .section-title {
-  color: var(--text-light-mode); /* Title color for light background */
-}
-
-.section[style="background-color: snow;"] .card {
-  background-color: white; /* White cards on light background */
-  color: var(--text-light-mode); /* Dark text inside cards */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow for cards on light background */
-  border: 1px solid #e0e0e0; /* Lighter border for cards */
-}
-
-.section[style="background-color: snow;"] .card:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Subtle hover shadow */
-    transform: translateY(-5px); /* Less aggressive lift */
-}
-
-.section[style="background-color: snow;"] .lead {
-  color: var(--text-light-mode);
-}
-
-.section[style="background-color: snow;"] .text-muted {
-  color: var(--gray) !important; /* Ensure muted text is visible */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none; /* Remove default Bootstrap icons */
-  width: 30px;
-  height: 30px;
-  background-color: var(--primary); /* Use primary color for controls */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-control-prev-icon::before {
-  content: '\f22a'; /* Bootstrap icon for chevron-left */
-  font-family: "bootstrap-icons" !important;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.carousel-control-next-icon::before {
-  content: '\f22b'; /* Bootstrap icon for chevron-right */
-  font-family: "bootstrap-icons" !important;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%; /* Adjust width for controls */
-}
-
-/* Modal Styling */
-.modal-content {
-  background-color: var(--dark); /* Consistent dark background for modal */
-  color: var(--text-dark-mode); /* Light text for modal content */
-  border: 1px solid var(--border-color-dark);
-  border-radius: 1rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-}
-
-.modal-header {
-  border-bottom: 1px solid var(--border-color-dark);
-  background-color: var(--darker); /* Slightly darker header */
-  color: var(--primary); /* Primary color for modal title */
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.modal-title {
-  color: var(--primary); /* Explicitly set title color */
-  font-weight: 600;
-}
-
-.modal-body {
-  color: var(--text-dark-mode); /* Ensure body text is readable */
-}
-
-.modal-body p {
-  color: var(--gray); /* Lighter text for the instructional paragraph */
-}
-
-.modal-body .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
-}
-
-.modal-body .btn-outline-primary {
-  color: var(--primary);
-  border-color: var(--primary);
-}
-
-.modal-body .btn-outline-primary:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-.btn-close {
-  background-color: transparent; /* Make close button blend in */
-  color: var(--gray); /* Color for the X icon */
-  opacity: 0.7;
-  filter: invert(1); /* Invert color for visibility on dark background */
-}
-
-.btn-close:hover {
-  opacity: 1;
+/* Make cards more visible against the background */
+#portfolio .card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Adjustments */
@@ -659,12 +219,7 @@ footer a:hover {
     padding: 70px 0;
   }
   
-  .hero {
+   .hero {
     padding: 120px 0 80px;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 10%; /* Increase clickable area on smaller screens */
-  }
+  } 
 }
