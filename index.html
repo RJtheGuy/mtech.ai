@@ -269,9 +269,13 @@
                             <a href="https://linkedin.com/in/rashid-mwinyi-27760a20a" target="_blank" class="btn btn-primary btn-lg px-4">
                                 <i class="bi bi-linkedin me-2"></i> LinkedIn
                             </a>
-                            <a href="assets/docs/resume.pdf" download class="btn btn-outline-light btn-lg px-4" style="color: orange;">
+<!--                             <a href="assets/docs/resume.pdf" download class="btn btn-outline-light btn-lg px-4" style="color: orange;">
+                                <i class="bi bi-file-earmark-pdf me-2"></i> Resume
+                            </a> -->
+                            <a class="btn btn-outline-light btn-lg px-4" style="color: orange;" data-bs-toggle="modal" data-bs-target="#resumeModal">
                                 <i class="bi bi-file-earmark-pdf me-2"></i> Resume
                             </a>
+
                         </div>
 
                         <div class="mt-4">
@@ -334,6 +338,25 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">Resume Under Review</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>The resume is currently being updated. Once it's ready, it will be made available for download on this page.</p>
+        <p>Thank you for your interest!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
